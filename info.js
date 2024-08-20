@@ -23,7 +23,7 @@ export const info = {
     city: "Zapopan",
     state: "Jalisco",
   },
-  optInWebhook: '',
+  optInWebhook: 'https://hook.us1.make.com/cfos672akcoc892jkcte7mzi7nyzh1fd',
   surveyRedirect: '',
   privacyNotice: "/aviso-privacidad",
   termsConditions: "/aviso-privacidad",
