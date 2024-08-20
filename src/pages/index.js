@@ -49,7 +49,7 @@ export default function Home() {
         <div className="container w-full text-left text-white z-10 p-8">
           <h1
             className="md:w-2/3 relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            Carga y descarga tus mercancías y sin arriesgar a tus trabajadores
+            Carga y descarga tus mercancías sin arriesgar a tus trabajadores
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-8 md:w-2/3">
             <div className="flex flex-col">
@@ -74,20 +74,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reading-container my-16">
-        <p>
-          Diseñamos una rampa hidráulica oculta que optimiza tu tiempo de trabajo y
-          reduce los costos operativos.<br/><br/>
-          Nuestra meta es que puedas manejar cargas pesadas de manera eficiente,
-          para que te centres en hacer crecer tu negocio.<br/><br/>
-          Imagina tener más tiempo para enfocarte en lo que realmente importa y
-          lleves tu operación a un nuevo nivel de productividad y seguridad.
-        </p>
-        <div className="flex flex-col justify-center items-center">
-          <Link href="#contact">
-            <a onClick={() => setLastClick('story')} className="button mb-4">{cta.main}</a>
-          </Link>
-          <p className="-ft-2 text-center">{cta.description}</p>
+      <section className="container grid grid-cols-1 md:grid-cols-2 my-16">
+        <div>
+          <video controls muted autoPlay playsInline preload="none" className="w-full h-full">
+            <source src="/landing/video.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="reading-container">
+          <p>
+            Diseñamos una rampa hidráulica oculta que optimiza tu tiempo de trabajo y
+            reduce los costos operativos.<br/><br/>
+            Nuestra meta es que puedas manejar cargas pesadas de manera eficiente,
+            para que te centres en hacer crecer tu negocio.<br/><br/>
+            Imagina tener más tiempo para enfocarte en lo que realmente importa y
+            lleves tu operación a un nuevo nivel de productividad y seguridad.
+          </p>
+          <div className="flex flex-col justify-center items-center">
+            <Link href="#contact">
+              <a onClick={() => setLastClick('story')} className="button mb-4">{cta.main}</a>
+            </Link>
+            <p className="-ft-2 text-center">{cta.description}</p>
+          </div>
         </div>
       </section>
 
@@ -144,11 +152,14 @@ export default function Home() {
           <div className="w-full flex flex-col justify-center">
             <h3>Somos compatibles</h3>
             <p>Si las camionetas de tu negocio son NISSAN NP 300, Hilux, Hino 100 o alguna similar
-              con rieles expuestos estamos listos para trabajar contigo.</p>
+              con rieles expuestos. <br/>Estamos listos para trabajar contigo.</p>
           </div>
           <div className="relative h-[32rem]">
             <div className="material-icons ft-6 absolute right-0 bottom-0 w-8 h-8 z-10">
               arrow_forward
+            </div>
+            <div className="-ft-2 ft-6 absolute w-full text-center bottom-0 h-8 z-10">
+              Desliza
             </div>
             <div className="material-icons ft-6 absolute left-0 bottom-0 w-8 h-8 z-10">
               arrow_back
@@ -215,8 +226,8 @@ export default function Home() {
             <div className="relative h-[56%] overflow-hidden flex items-center order-2 md:order-1 mb-8 md:hidden">
               <Image src={ie03} className="object-cover"/>
             </div>
-            <p className="order-3">Optimiza los tiempos de carga y descarga y evita lesiones en tu equipo de trabajo
-              La rampa DC-500 N soporta desde 1 tonelada hasta 3.5 toneladas de capacidad
+            <p className="order-3">Optimiza los tiempos de carga y descarga y evita lesiones en tu equipo de trabajo.
+              La rampa DC-500 N soporta desde 1 tonelada hasta 3.5 toneladas de capacidad.<br/>
               No hay excusas para incrementar tu productividad.</p>
           </div>
         </div>
@@ -230,9 +241,9 @@ export default function Home() {
             <p className="order-3">
               Incluye un disyuntor de energía que funciona con una pastilla de corriente.
               <br/>
-              En caso de que la rapa se force de más, se bota la pastilla y corta la corriente.
+              En caso de que la rampa se force de más, se bota la pastilla y corta la corriente.
               <br/>
-              Logrando proteger la bateria de tu camioneta y el motor de la rampa hidráulic</p>
+              Logrando proteger la batería de tu camioneta y el motor de la rampa hidráulica.</p>
           </div>
           <div className="hidden md:flex relative h-[32rem]">
             <Image src={ie04} className="object-cover"/>
@@ -248,14 +259,14 @@ export default function Home() {
 
       <Blockbuster
         overhead="Target"
-        title="Si lo que buscas más eficiencia, seguridad y ganancias, entonces nuestras rampas son para ti"
+        title="Si lo que buscas es más eficiencia, seguridad y ganancias, entonces nuestras rampas son para ti"
         image={i03}
       />
       <section className="reading-container my-16">
         <p className="ft-2">
           Seguramente llegaste aquí por 3 razones:
           <br/><br/>
-          1. Tu logística ha sido un dolor de cabeza por el tiempo que se pierda en la carga y descarga de
+          1. Tu logística ha sido un dolor de cabeza por el tiempo que se pierde en la carga y descarga de
           mercancías.
           <br/><br/>
           2. Se te han ido clientes porque no tienes “capacidad” para mercancías pesadas.
