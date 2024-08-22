@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Capacidad</p>
-              <p className="ft-3 md:text-left">Desde 1 ton.</p>
+              <p className="ft-3 md:text-left">Hasta 600kg</p>
             </div>
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Lista en</p>
