@@ -6,7 +6,7 @@ export default function Faqs() {
   const questions = [
     {
       q: "¿Qué camionetas no son compatibles con la rampa?",
-      a: "Las camionetas de carga con caja en la parte trasera, vans o pickups no son compatibles con la rampa hidráulica ya que no cuentan con rieles expuestos."
+      a: "Vans o cajas tipo pickups no son compatibles con la rampa hidráulica ya que no cuentan con rieles expuestos. Nuestra rampa solo es compatible con cajas secas, redilas y plataformas."
     },
     {
       q: "¿Cuánto tiempo dura la instalación?",
@@ -18,7 +18,7 @@ export default function Faqs() {
     },
     {
       q: "¿Cuánto peso va a soportar mi rampa?",
-      a: "Esta rampa hidráulica soporta desde 1 tonelada hasta 3 toneladas de peso."
+      a: "Tenemos 3 modelos que soportan 600kg, 800kg y 1 tonelada."
     },
     {
       q: "¿Cómo es el mantenimiento de la rampa?",

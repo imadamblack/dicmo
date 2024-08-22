@@ -54,17 +54,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-8 md:w-2/3">
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Desde</p>
-              <p className="ft-3 md:text-left">$65mil MXN</p>
+              <p className="ft-3 md:text-left">$65mil netos</p>
             </div>
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Capacidad</p>
               <p className="ft-3 md:text-left">Hasta 600kg</p>
             </div>
             <div className="flex flex-col">
-              <p className="-ft-2 md:text-left">Lista en</p>
+              <p className="-ft-2 md:text-left">Instalación</p>
               <p className="ft-3 md:text-left">15 días</p>
             </div>
           </div>
+          <p>* Precio neto, ya incluye IVA e instalación</p>
           <div className="flex flex-col justify-start items-start mt-12">
             <Link href="#contact">
               <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>
@@ -180,10 +181,10 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           <div className="hidden md:flex relative h-[32rem]">
-            <Image src={ie01} className="object-cover"/>
+            <Image src={ie01} className="object-cover object-bottom"/>
           </div>
           <div className="flex flex-col justify-center">
-            <h3 className="order-1 md:order-2 mb-8">Diseñada para soportar toda la chamba</h3>
+            <h3 className="order-1 md:order-2 mb-8">Diseñada para no obstruir las puertas de la caja</h3>
             <div className="relative h-[56%] overflow-hidden flex items-center order-2 md:order-1 mb-8 md:hidden">
               <Image src={ie01} className="object-cover"/>
             </div>
@@ -197,7 +198,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col justify-center">
-            <h3 className="order-1 md:order-2 mb-8">Pequeña, innovadora y oculta</h3>
+            <h3 className="order-1 md:order-2 mb-8">La más liviana, pequeña e innovadora del mercado</h3>
             <div className="relative h-[56%] overflow-hidden flex items-center order-2 md:order-1 mb-8 md:hidden">
               <Image src={ie02} className="object-cover"/>
             </div>
