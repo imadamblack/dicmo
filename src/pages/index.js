@@ -53,10 +53,6 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-8 md:w-2/3">
             <div className="flex flex-col">
-              <p className="-ft-2 md:text-left">Desde</p>
-              <p className="ft-3 md:text-left">$65mil netos</p>
-            </div>
-            <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Capacidad</p>
               <p className="ft-3 md:text-left">Hasta 600kg</p>
             </div>
@@ -64,8 +60,12 @@ export default function Home() {
               <p className="-ft-2 md:text-left">Instalación</p>
               <p className="ft-3 md:text-left">15 días</p>
             </div>
+            <div className="flex flex-col">
+              <p className="-ft-2 md:text-left">Tipo</p>
+              <p className="ft-3 md:text-left">Oculta</p>
+            </div>
           </div>
-          <p>* Precio neto, ya incluye IVA e instalación</p>
+          {/*<p>* Precio neto, ya incluye IVA e instalación</p>*/}
           <div className="flex flex-col justify-start items-start mt-12">
             <Link href="#contact">
               <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>
