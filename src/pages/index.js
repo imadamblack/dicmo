@@ -228,7 +228,7 @@ export default function Home() {
               <Image src={ie03} className="object-cover"/>
             </div>
             <p className="order-3">Optimiza los tiempos de carga y descarga y evita lesiones en tu equipo de trabajo.
-              La rampa DC-500 N soporta desde 1 tonelada hasta 3.5 toneladas de capacidad.<br/>
+              Nuestras rampas soportan 600kg, 800kg y 1 tonelada.<br/>
               No hay excusas para incrementar tu productividad.</p>
           </div>
         </div>
