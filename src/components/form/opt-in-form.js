@@ -104,7 +104,7 @@ export default function OptInForm({lastClick = ''}) {
           {required: true,},
         )}
         className={errors.model && '!bg-red-200'}
-        placeholder="Modelo de tus camionetas"/>
+        placeholder="Marca, Modelo y Año de tus camionetas"/>
       <input
         {...register(
           'units',
