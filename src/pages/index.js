@@ -51,6 +51,7 @@ export default function Home() {
             className="md:w-2/3 relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             Carga y descarga tus mercancías sin arriesgar a tus trabajadores
           </h1>
+          <p className="ft-1 mt-4">Compatible con Nissan NP 300, Toyota Hilux, Hino 100 y similares con rieles expuestos</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-8 md:w-2/3">
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Capacidad</p>
@@ -149,34 +150,45 @@ export default function Home() {
       />
       <section className="container my-16 space-y-32">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <div className="items-stretch">
           <div className="w-full flex flex-col justify-center">
             <h3>Somos compatibles</h3>
             <p>Si las camionetas de tu negocio son NISSAN NP 300, Hilux, Hino 100 o alguna similar
               con rieles expuestos. <br/>Estamos listos para trabajar contigo.</p>
           </div>
-          <div className="relative h-[32rem]">
-            <div className="material-icons ft-6 absolute right-0 bottom-0 w-8 h-8 z-10">
-              arrow_forward
+          <div className="w-full grid md:grid-cols-3">
+            <div className="relative pt-[70%]">
+              <Image src={iec01} layout="fill" objectFit="contain"/>
             </div>
-            <div className="-ft-2 ft-6 absolute w-full text-center bottom-0 h-8 z-10">
-              Desliza
+            <div className="relative pt-[70%]">
+              <Image src={iec02} layout="fill" objectFit="contain"/>
             </div>
-            <div className="material-icons ft-6 absolute left-0 bottom-0 w-8 h-8 z-10">
-              arrow_back
-            </div>
-            <div className="h-full flex gap-8 overflow-scroll snap-x snap-mandatory justify-start">
-              <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">
-                <Image src={iec01} layout="fill" objectFit="contain"/>
-              </div>
-              <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">
-                <Image src={iec02} layout="fill" objectFit="contain"/>
-              </div>
-              <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">
-                <Image src={iec03} layout="fill" objectFit="contain"/>
-              </div>
+            <div className="relative pt-[70%]">
+              <Image src={iec03} layout="fill" objectFit="contain"/>
             </div>
           </div>
+          {/*<div className="relative h-[32rem]">*/}
+          {/*  <div className="material-icons ft-6 absolute right-0 bottom-0 w-8 h-8 z-10">*/}
+          {/*    arrow_forward*/}
+          {/*  </div>*/}
+          {/*  <div className="-ft-2 ft-6 absolute w-full text-center bottom-0 h-8 z-10">*/}
+          {/*    Desliza*/}
+          {/*  </div>*/}
+          {/*  <div className="material-icons ft-6 absolute left-0 bottom-0 w-8 h-8 z-10">*/}
+          {/*    arrow_back*/}
+          {/*  </div>*/}
+          {/*  <div className="h-full flex gap-8 overflow-scroll snap-x snap-mandatory justify-start">*/}
+          {/*    <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">*/}
+          {/*      <Image src={iec01} layout="fill" objectFit="contain"/>*/}
+          {/*    </div>*/}
+          {/*    <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">*/}
+          {/*      <Image src={iec02} layout="fill" objectFit="contain"/>*/}
+          {/*    </div>*/}
+          {/*    <div className="relative min-w-[28rem] md:min-w-[40rem] snap-center">*/}
+          {/*      <Image src={iec03} layout="fill" objectFit="contain"/>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">

@@ -19,6 +19,7 @@ export default function OptInForm({lastClick = ''}) {
   const onSubmit = (data) => {
     setSending(true);
     data.phone = '52' + data.phone.replace(/^(MX)?\+?(52)?\s?0?1?|\s|\(|\)|-|[a-zA-Z]/g, '');
+    data.model = data.brand + ' ' + data.type + ' ' + data.year;
     data.origin = 'Notoriovs Landing';
     data.lastClick = lastClick;
 
@@ -94,24 +95,42 @@ export default function OptInForm({lastClick = ''}) {
       <input
         {...register(
           'company',
-          {required: true,},
+          {required: true},
         )}
         className={errors.company && '!bg-red-200'}
         placeholder="Nombre de tu empresa"/>
-      <input
-        {...register(
-          'model',
-          {required: true,},
-        )}
-        className={errors.model && '!bg-red-200'}
-        placeholder="Marca, Modelo y Año de tus camionetas"/>
+      <p className="text-white">Info de tus vehículos</p>
+      <div className="grid grid-cols-3 gap-4">
+        <input
+          {...register(
+            'brand',
+            {required: true},
+          )}
+          className={errors.brand && '!bg-red-200'}
+          placeholder="Marca"/>
+        <input
+          {...register(
+            'type',
+            {required: true},
+          )}
+          className={errors.type && '!bg-red-200'}
+          placeholder="Modelo"/>
+        <input
+          {...register(
+            'year',
+            {required: true},
+          )}
+          className={errors.year && '!bg-red-200'}
+          onKeyDown={restrictNumber}
+          placeholder="Año"/>
+      </div>
       <input
         {...register(
           'units',
         )}
         className={errors.units && '!bg-red-200'}
         onKeyDown={restrictNumber}
-        placeholder="Unidades de transporte (en número)"/>
+        placeholder="Unidades (en número)"/>
 
       <button
         disabled={sending}
