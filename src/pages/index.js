@@ -51,7 +51,8 @@ export default function Home() {
             className="md:w-2/3 relative font-medium ft-9 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             Carga y descarga tus mercancías sin arriesgar a tus trabajadores
           </h1>
-          <p className="ft-1 mt-4">Compatible con Nissan NP 300, Toyota Hilux, Hino 100 y similares con rieles expuestos</p>
+          <p className="ft-1 mt-4">Compatible con Nissan NP 300, Toyota Hilux, Hino 100 y similares con rieles
+            expuestos</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 my-8 md:w-2/3">
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Capacidad</p>
@@ -62,17 +63,19 @@ export default function Home() {
               <p className="ft-3 md:text-left">15 días</p>
             </div>
             <div className="flex flex-col">
-              <p className="-ft-2 md:text-left">Tipo</p>
-              <p className="ft-3 md:text-left">Oculta</p>
+              <p className="-ft-2 md:text-left">Desde</p>
+              <p className="ft-3 md:text-left">$65,540</p>
             </div>
           </div>
           {/*<p>* Precio neto, ya incluye IVA e instalación</p>*/}
           <div className="flex flex-col justify-start items-start mt-12">
-            <Link href="#contact">
-              <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>
-            </Link>
+            {/*<Link href="#contact">*/}
+            {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
+            {/*</Link>*/}
             <p className="-ft-2 md:text-left">{cta.description}</p>
           </div>
+          <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
+
         </div>
       </section>
 
@@ -92,12 +95,12 @@ export default function Home() {
             Imagina tener más tiempo para enfocarte en lo que realmente importa y
             lleves tu operación a un nuevo nivel de productividad y seguridad.
           </p>
-          <div className="flex flex-col justify-center items-center">
-            <Link href="#contact">
-              <a onClick={() => setLastClick('story')} className="button mb-4">{cta.main}</a>
-            </Link>
-            <p className="-ft-2 text-center">{cta.description}</p>
-          </div>
+          {/*<div className="flex flex-col justify-center items-center">*/}
+          {/*  <Link href="#contact">*/}
+          {/*    <a onClick={() => setLastClick('story')} className="button mb-4">{cta.main}</a>*/}
+          {/*  </Link>*/}
+          {/*  <p className="-ft-2 text-center">{cta.description}</p>*/}
+          {/*</div>*/}
         </div>
       </section>
 
@@ -133,14 +136,14 @@ export default function Home() {
               ambiente de trabajo seguro y eficiente</p>
           </div>
         </div>
-        <div className="reading-container">
-          <div className="flex flex-col justify-center items-center">
-            <Link href="#contact">
-              <a onClick={() => setLastClick('testimonials')} className="button mb-4">{cta.main}</a>
-            </Link>
-            <p className="-ft-2 text-center">{cta.description}</p>
-          </div>
-        </div>
+        {/*<div className="reading-container">*/}
+        {/*  <div className="flex flex-col justify-center items-center">*/}
+        {/*    <Link href="#contact">*/}
+        {/*      <a onClick={() => setLastClick('testimonials')} className="button mb-4">{cta.main}</a>*/}
+        {/*    </Link>*/}
+        {/*    <p className="-ft-2 text-center">{cta.description}</p>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </section>
 
       <Blockbuster
