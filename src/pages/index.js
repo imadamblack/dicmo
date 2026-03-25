@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <p className="-ft-2 md:text-left">Desde</p>
-              <p className="ft-3 md:text-left">$65,540</p>
+              <p className="ft-3 md:text-left">$67,000</p>
             </div>
           </div>
           {/*<p>* Precio neto, ya incluye IVA e instalación</p>*/}
