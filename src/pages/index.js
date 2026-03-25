@@ -293,7 +293,7 @@ export default function Home() {
           que ahorres tiempo, que evites accidentes en tu personal y
           disminuyas tus gastos operativos.
           <br/><br/>
-          Andas gastando mucha lana en chalanes, cuando nuestra rampa <b>DC-500 N</b> tiene un costo de <b>$65,540</b>.
+          Andas gastando mucha lana en chalanes, cuando nuestra rampa <b>DC-500 N</b> tiene un costo de <b>$67,000</b>.
           <br/><br/>
           Además de que no vas a tener que gastar ni un peso más en instalación o en adecuar tu camioneta.
           <br/><br/>
