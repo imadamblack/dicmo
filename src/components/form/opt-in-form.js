@@ -1,20 +1,24 @@
 import Link from 'next/link';
 import { info } from '../../../info';
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { getCookie, setCookie } from 'cookies-next';
 import { useState } from 'react';
 import { restrictNumber, emailRegExp } from '../../utils/formValidators';
 import fbEvent from '../../services/fbEvents';
+import { mexicanStates } from '../../catalogs/mexican-states';
+import { Select } from './formAtoms';
 
 export default function OptInForm({lastClick = ''}) {
   const [sending, setSending] = useState(false);
   const router = useRouter();
+  const methods = useForm({mode: 'all'});
   const {
     register,
     handleSubmit,
     formState: {errors},
-  } = useForm();
+    setError,
+  } = methods;
 
   const onSubmit = (data) => {
     setSending(true);
@@ -61,91 +65,102 @@ export default function OptInForm({lastClick = ''}) {
   };
 
   return (
-    <form className="flex flex-col w-full space-y-4" onSubmit={handleSubmit(onSubmit)}>
-      <input
-        {...register(
-          'fullName',
-          {
-            required: true,
-          },
-        )}
-        className={errors.fullName && '!bg-red-200'}
-        placeholder="Tu nombre"/>
-      <input
-        {...register(
-          'email',
-          {
-            required: true,
-            pattern: {
-              value: emailRegExp,
-              message: 'Revisa tu correo',
+    <FormProvider {...methods}>
+      <form className="flex flex-col w-full space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          {...register(
+            'fullName',
+            {
+              required: true,
             },
-          },
-        )}
-        className={errors.email && '!bg-red-200'}
-        placeholder="Un email activo"/>
-      <input
-        {...register(
-          'phone',
-          {required: true, maxLength: 10, minLength: 10},
-        )}
-        className={errors.phone && '!bg-red-200'}
-        onKeyDown={restrictNumber}
-        placeholder="Teléfono de WhatsApp"/>
-      <input
-        {...register(
-          'company',
-          {required: true},
-        )}
-        className={errors.company && '!bg-red-200'}
-        placeholder="Nombre de tu empresa"/>
-      <p className="text-white">Info de tus vehículos</p>
-      <div className="grid grid-cols-3 gap-4">
+          )}
+          className={errors.fullName && '!bg-red-200'}
+          placeholder="Tu nombre"/>
         <input
           {...register(
-            'brand',
-            {required: true},
+            'email',
+            {
+              required: true,
+              pattern: {
+                value: emailRegExp,
+                message: 'Revisa tu correo',
+              },
+            },
           )}
-          className={errors.brand && '!bg-red-200'}
-          placeholder="Marca"/>
+          className={errors.email && '!bg-red-200'}
+          placeholder="Un email activo"/>
         <input
           {...register(
-            'type',
-            {required: true},
+            'phone',
+            {required: true, maxLength: 10, minLength: 10},
           )}
-          className={errors.type && '!bg-red-200'}
-          placeholder="Modelo"/>
-        <input
-          {...register(
-            'year',
-            {required: true},
-          )}
-          className={errors.year && '!bg-red-200'}
+          className={errors.phone && '!bg-red-200'}
           onKeyDown={restrictNumber}
-          placeholder="Año"/>
-      </div>
-      <input
-        {...register(
-          'units',
-        )}
-        className={errors.units && '!bg-red-200'}
-        onKeyDown={restrictNumber}
-        placeholder="Unidades (en número)"/>
+          placeholder="Teléfono de WhatsApp"/>
+        <input
+          {...register(
+            'company',
+            {required: true},
+          )}
+          className={errors.company && '!bg-red-200'}
+          placeholder="Nombre de tu empresa"/>
+        <div className="grid grid-cols-2 gap-4">
+          <input
+            {...register(
+              'city',
+              {required: true},
+            )}
+            className={errors.brand && '!bg-red-200'}
+            placeholder="Ciudad"/>
+          <Select
+            options={mexicanStates}
+            name="state"
+            inputOptions={{required: true}}
+            placeholder="Estado"
+            className={`rounded-md px-6 py-4 bg-white ${errors.state && '!bg-red-200'}`}
+          />
+        </div>
+        <p className="text-white">Info de tus vehículos</p>
+        <div className="grid grid-cols-3 gap-4">
+          <input
+            {...register(
+              'brand',
+              {required: true},
+            )}
+            className={errors.brand && '!bg-red-200'}
+            placeholder="Marca"/>
+          <input
+            {...register(
+              'type',
+              {required: true},
+            )}
+            className={errors.type && '!bg-red-200'}
+            placeholder="Modelo"/>
+          <input
+            {...register(
+              'year',
+              {required: true},
+            )}
+            className={errors.year && '!bg-red-200'}
+            onKeyDown={restrictNumber}
+            placeholder="Año"/>
+        </div>
 
-      <button
-        disabled={sending}
-        className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-3'}`}
-      >{
-        !sending
-          ? 'Enviar →'
-          : <span className="material-symbols-outlined animate-spin">progress_activity</span>
-      }</button>
+        <button
+          disabled={sending}
+          className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-3'}`}
+        >{
+          !sending
+            ? 'Enviar →'
+            : <span className="material-symbols-outlined animate-spin">progress_activity</span>
+        }</button>
 
-      <div className="mt-4">
-        <p className="-ft-3 text-center text-white">Al dar clic aceptas nuestra&nbsp;
-          <Link href={info.privacyNotice}>política de privacidad</Link>
-        </p>
-      </div>
-    </form>
+        <div className="mt-4">
+          <p className="-ft-3 text-center text-white">Al dar clic aceptas nuestra&nbsp;
+            <Link href={info.privacyNotice}>política de privacidad</Link>
+          </p>
+        </div>
+      </form>
+    </FormProvider>
   );
 }
